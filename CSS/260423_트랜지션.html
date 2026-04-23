@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜지션</title>
+</head>
+
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: darkblue;
+        margin: 10px;
+    }
+    .d1{
+        transition-duration: 1s; /* 1초만에 300px 이동해라 */
+        /*transition-delay: 1s; !* 1초 뒤에 동작해라 *!*/
+        /* 변경되는 부드러움 정도 (시작할때 부드럽게 시작하기 등) */
+        transition-timing-function: linear; /* 일정한 속도로 */
+    }
+    .d1:hover{
+        transform: translateX(300px);
+    }
+
+    .d2{
+        background-color: gray;
+        border-radius: 50%;
+        border: 10px solid black;
+        border-top-color: blue;
+        border-bottom-color: red;
+        border-left-color: chocolate;
+        border-right-color: fuchsia;
+        transition-duration: 1s;
+    }
+
+    .d2:hover{
+        transform: rotate(360deg) translateX(200px);
+    }
+
+    .d3{
+        background-color: gold;
+        transition-duration: 1s;
+        /* transition-property: transition이 적용될 대상을 정함 */
+        transition-property: background-color;
+    }
+    .d3:hover{
+        /* 100%: 자신의 width 크기만큼 이동 */
+        transform: translateX(40%);
+        background-color: green;
+    }
+
+    .d4{
+        transition-duration: 1s;
+        transition-timing-function: linear;
+    }
+    .d4:hover{
+        transform: scale(2);
+    }
+
+</style>
+
+<body>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
+
+
+
+
+
