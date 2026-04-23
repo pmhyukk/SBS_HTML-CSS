@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자 우선순위</title>
+</head>
+
+<style>
+    /* 우선도: 인라인(태그에 적는거) > #(id) > .(class) > 단순태그명 */
+    .d3{
+        color: darkblue;
+    }
+    #d2{
+        color: darkcyan;
+    }
+    div{
+        /*color: blue!important;*/
+        color: blue;
+    }
+    /* section 내부의 div 선택하세용 */
+    section > div{
+        font-style: italic;
+    }
+</style>
+
+<body>
+    <div style="color: chocolate">D1</div>
+    <div id="d2" class="d3">D2</div>
+    <div class="d3">D3</div>
+    <div>D4</div>
+
+    <section>
+        <div>SECTION 안의 DIV</div>
+    </section>
+
+
+</body>
+</html>
+
+
+
+

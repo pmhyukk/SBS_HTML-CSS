@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>셀렉트</title>
+</head>
+<body>
+    <select>
+        <option>값1</option>
+        <option>값2</option>
+        <option selected>값3</option>
+    </select>
+
+    <select>
+        <option selected disabled>통신사를 선택하세요.</option>
+        <option>KT</option>
+        <option>LG</option>
+        <option>SKT</option>
+    </select>
+
+    <!-- INPUT 내부에 적을 수 있는 데이터들을 나열   -->
+    <!-- 선택 시, INPUT 값이 선택한 데이터가 됨   -->
+    <input type="text" list="telecom">
+    <datalist id="telecom">
+        <option value="KT">KT</option>
+        <option>LG</option>
+        <option>SKT</option>
+    </datalist>
+    <!--    -->
+    <br>
+
+    <h1>회원 가입 환영!</h1>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+                <li>
+                    <label>
+                        <span>아이디</span>
+                        <input type="text" placeholder="아이디를 작성하셈">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span>이메일</span>
+                        <input type="email" value="a@n.com">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span>비밀번호</span>
+                        <input type="password" placeholder="비번 쓰셈">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span>비밀번호 확인</span>
+                        <input type="password">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span>가입경로</span>
+                        <select>
+                            <option>블로그</option>
+                            <option>인스타</option>
+                            <option>웹서치</option>
+                        </select>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span>메모</span>
+                        <textarea cols="30" rows="5" placeholder="본문 적으세용"></textarea>
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>이벤트와 새로운 소식!</legend>
+
+            <input id="receive" type="radio" name="mail" checked>
+            <label for="receive">메일 수신</label>
+
+            <input id="not-receive" type="radio" name="mail">
+            <label for="not-receive">메일 수신 안함</label>
+        </fieldset>
+
+        <div>
+            <button type="submit">가입하기</button>
+            <button type="button">취소</button>
+        </div>
+    </form>
+
+
+
+
+
+</body>
+</html>

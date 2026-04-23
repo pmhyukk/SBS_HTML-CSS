@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자식선택자</title>
+    <style>
+        /* 선택 경로가 더 상세한게, 코드 작성 순서보다 우선임 */
+        /* ol태그, ul태그 둘 다 선택 */
+        ol, ul {
+            font-weight: bold;
+        }
+        /* section 태그 안에 있는 모든 li 다 선택하세요. */
+        section li{
+            background-color: beige;
+        }
+        /* section 바로 아래의 ul태그 바로 아래의 li 를 선택하세요. */
+        section > ul > li{
+            color: darkblue;
+        }
+        /* ul태그 바로 아래에 있는 li 를 선택하세요. */
+        ul > li{
+            color: blue;
+        }
+        li{
+            color: red;
+        }
+        /* a태그의 바로 다음에 있는 span 태그 선택하세요 */
+        a+span{
+            font-size: 20px;
+        }
+        /* a태그하고 같은 줄에 적혀있는 (같은 계층)의 span 태그 */
+        a~span{
+            color: chocolate;
+        }
+        /* placeholder 속성이 있는 input 태그들을 선택 */
+        input[placeholder]{
+            background-color: aqua;
+        }
+        /* type="text" 가 있는 input 태그들 선택 */
+        input[type=text]{
+            font-size: 20px;
+        }
+        a[href*="google"]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <ol>
+            <li>OL1</li>
+            <li>OL2</li>
+        </ol>
+        <ul>
+            <li>LI1</li>
+            <li>LI2</li>
+            <li>LI3</li>
+        </ul>
+        <ul>
+            <li>LI4</li>
+            <li>LI5</li>
+            <li>LI6</li>
+        </ul>
+    </section>
+
+    <a href="#">A태그</a>
+    <span>SPAN1</span>
+    <span>SPAN2</span>
+    <div>DIV</div>
+    <span>SPAN3</span>
+
+    <hr>
+    <a href="https://www.naver.com">A태그</a> <br>
+    <a href="https://www.google.com">A태그</a> <br>
+    <input type="text" placeholder="text"> <br>
+    <input type="password" placeholder="password"> <br>
+    <input type="text">
+
+</body>
+</html>
+
+
+

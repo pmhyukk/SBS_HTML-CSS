@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>폰트</title>
+    <style>
+        @font-face {
+            font-family: 'PRE';
+            src: url('fonts/Pre.otf');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'PRE';
+            src: url('fonts/Pre.otf');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'YeogiOttaeJalnan';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+            font-weight: normal;
+            font-display: swap;
+        }
+
+        *{
+            font-family: 'YeogiOttaeJalnan';
+        }
+
+        #d1{
+            font-size: 0.625rem;
+        }
+        #d2{
+            font-family: YeogiOttaeJalnan;
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 100;
+            /*font-style: oblique;*/
+        }
+        section{
+            font-family: PRE;
+            font-size: 20px;
+        }
+        section > div{
+            font-size: 2em;
+        }
+        article{
+            /*font-size: 20px;*/
+        }
+        article > div{
+            font-size: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">글자1</div>
+    <div id="d2">글자2</div>
+    <section>
+        SECTION
+        <div id="d3">글자3</div>
+    </section>
+    <article>
+        ARTICLE
+        <div id="d4">글자4</div>
+    </article>
+</body>
+</html>

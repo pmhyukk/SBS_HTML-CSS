@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>포지션입니다..ㅠ</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    /* fixed: 현재 위치를 고정하기. 상단 바에 자주 사용됨 */
+    /* 스크롤을 움직여도 그 위치에 그대로 있음 */
+    /* width, height 등, 요소의 크기를 직접 정해야 함 */
+    position: fixed;
+    width: 100%; /* 가로 크기 꽉 채우세요. */
+    /* 요소 내부의 글자들을 중앙정렬 */
+    text-align: center;
+    background-color: powderblue;
+  }
+  main{
+    padding-top: 100px;
+    background-color: gainsboro;
+  }
+  aside{
+    width: 250px;
+    height: 1000px;
+    text-align: center;
+    display: inline-block;
+    background-color: chocolate;
+  }
+  section{
+    /**/
+    /*
+        position: sticky
+         그 자리에 있다가, 화면을 벗어날 것 같으면 화면에 붙어서 같이 이동하세요.
+     */
+    position: sticky;
+    top: 0; /* 붙어있을 기준 점을 정해줘야함. 자신의 부모 최상단에 붙어라. */
+    /**/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    background-color: beige;
+  }
+</style>
+<body>
+<header>HEADER</header>
+<main>
+  <aside>ASIDE</aside>
+  <section>SECTION</section>
+</main>
+</body>
+</html>

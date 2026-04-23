@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>변형 함수</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    #d1{
+        background-color: aqua;
+        /* x축, 오른쪽으로 100px 이동 */
+        transform: translateX(100px);
+    }
+    #d2{
+        background-color: aqua;
+        /* z축을 기준으로 45도 회전 */
+        transform: rotateZ(45deg);
+    }
+    #d3{
+        background-color: fuchsia;
+        /* 자신의 원래 크기에서 *2 */
+        transform: scale(200%);
+    }
+    #d4{
+        margin: 400px 0;
+        background-color: blue;
+    }
+    #d4:hover{
+        transform: scale(200%);
+    }
+
+    #d5{
+        background-color: blueviolet;
+        margin: 400px 0;
+    }
+    #d5:hover{
+        /*position: relative;*/
+        /*left: 300px;*/
+        transform: translateX(300px);
+    }
+
+
+</style>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+</body>
+</html>
