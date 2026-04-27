@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>애니메이션</title>
+</head>
+<style>
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: salmon;
+        /* right_move 애니메이션을 적용한다 */
+        animation-name: right_move;
+        animation-duration: 1s; /* 몇 초 동안? */
+        animation-iteration-count: infinite; /* 무한대로 실행 해줘 */
+        animation-direction: alternate;
+    }
+
+    /* keyframes에 애니메이션 이름을 정의 */
+    @keyframes right_move {
+        /* from: 시작할 때 스타일 */
+        from{}
+        /* to: 끝날 때의 스타일 */
+        to{
+            background-color: blueviolet;
+            transform: translateX(500px);
+        }
+    }
+
+    .box2{
+        width: 200px;
+        height: 200px;
+        background-color: plum;
+        animation-name: move;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    @keyframes move {
+        from{
+            background-color: salmon;
+        }
+        50%{
+            background-color: greenyellow;
+            transform: translateY(500px);
+        }
+        to{
+            background-color: blue;
+            transform: translateX(500px);
+        }
+    }
+
+</style>
+
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+
+
+
+
+
+
+
+</body>
+</html>

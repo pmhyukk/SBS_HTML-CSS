@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>정렬 하는 법</title>
+</head>
+<style>
+  /* 부모에게 text-align 주기 */
+  .d1{
+    text-align: center;
+  }
+  /* width를 지정한다음, margin: auto */
+  .d2 > div{
+    border: 1px solid red;
+    width: 200px;
+    margin: auto;
+  }
+  /* 자식들은 inline 요소로 변환 후, 부모에게 text-align*/
+  .d3{
+    text-align: center;
+  }
+  .d3 > div{
+    border: 1px solid red;
+    display: inline-block;
+  }
+
+  /* 부모를 flex 로 변경 후, justify-content: center; */
+  .d4{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .d5{
+    background-color: ivory;
+    /* 부모 요소에게 padding 상하를 일정한 값을 준다 */
+    padding: 100px;
+  }
+
+  .d6{
+    background-color: ivory;
+    border: 1px solid red;
+    height: 100px;
+    /* height를 명시하고, line-height를 똑같이 맞춘다 */
+    line-height: 100px;
+  }
+
+  /* 표 처럼 만들기.. */
+  .d7{
+    display: table;
+    height: 100px;
+    background-color: ivory;
+  }
+  .d7 > div{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .d8{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: ivory;
+  }
+</style>
+<body>
+<h1>요소 정렬 하는 법</h1>
+<h2>수평 정렬(Horizontal Align)</h2>
+<h3>인라인(인라인-블록 요소, inline 붙은 요소들)</h3>
+<div class="d1">
+  <span>정렬대상</span>
+</div>
+<h3>블록요소(block, flex, grid)</h3>
+<div class="d2">
+  <div>정렬대상</div>
+</div>
+<div class="d3">
+  <div>정렬대상1</div>
+  <div>정렬대상2</div>
+</div>
+
+<h3>어디든 사용 가능한 방식</h3>
+<div class="d4">
+  <span>정렬대상</span>
+</div>
+
+<div class="d4">
+  <div>정렬대상</div>
+</div>
+
+
+<h2>수직 정렬(Vertical Align)</h2>
+<h3>한 줄 인라인(인라인-블록 요소, inline 붙은 요소들)</h3>
+<div class="d5">
+  <span>정렬대상</span>
+</div>
+
+<div class="d6">
+  <span>정렬대상</span>
+</div>
+
+<h3>여러 줄</h3>
+<div class="d7">
+  <div>정렬대상1</div>
+  <div>정렬대상2</div>
+</div>
+
+<h3>여러 줄</h3>
+<div class="d8">
+  <div>정렬대상1</div>
+  <div>정렬대상2</div>
+</div>
+
+
+
+</body>
+</html>

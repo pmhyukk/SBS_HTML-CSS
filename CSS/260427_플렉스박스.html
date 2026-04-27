@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>플렉스 박스</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container{
+      display: flex;
+      width: 500px;
+      background-color: ivory;
+      margin-bottom: 20px;
+      border: 1px solid black;
+    }
+    .box{
+      width: 100px;
+      background-color: #dfdf31;
+      border: 1px solid black;
+    }
+
+
+    #con1{
+      /*
+          자식들의 배치 방법을 결정 (세로(column), 가로(row)-기본)
+          row: 왼쪽에서 오른쪽
+          row-reverse: 오른쪽에서 왼쪽
+      */
+      flex-direction: column;
+    }
+    #con2{
+      /* 내부 자식들을 줄바꿈 시킬건가의 여부
+          nowrap: 줄바꿈 안시킴 (기본) (자식 width 무시)
+          wrap: 줄바꿈 (자식의 width 적용)
+      */
+      flex-wrap: wrap;
+    }
+    #con3{
+      width: 100%;
+      /*
+          중요! -> 이 속성들은 자식에 설정해야함!
+          부모의 크기에 맞춰 자식을 늘릴까 줄일까? (기본이 전부 1)
+          기본은, 부모에 여백이 있으면 자식을 늘리고, 부모가 줄어들면 자식도 줄어든다.
+          flex-grow: ;
+          flex-shrink: ;
+          flex-basis: ;
+       */
+    }
+    #con3 > .box{
+      /*
+          width 고정과 같음. width: 50px로 해줘.
+          flex 자식요소는 width 가 아닌, basis로 크기를 설정
+      */
+      flex-basis: 50px;
+      flex-shrink: 0; /* 부모에 맞춰서 줄어들지 마라. */
+      flex-grow: 1; /* 부모 크기에 맞춰서 늘릴 수 있을 때는 계속 늘려라 */
+    }
+    #con4{
+      width: 100%;
+    }
+    /* 9번째 자식한테만 */
+    #con4 > .box:nth-child(9){
+      /* 남은 여백 다 채워라! */
+      flex-grow: 1; /* 비율을 뜻함. 1비율. */
+    }
+    #con4 > .box:nth-child(10){
+      /* 남은 여백 다 채워라! */
+      flex-grow: 2;
+    }
+    /***************************************/
+    #con5{
+      width: 100%;
+      height: 200px;
+      flex-wrap: wrap;
+      /* 자식들을 수직 정중앙 정렬 !! (가로) */
+      justify-content: center;
+      /* 자식들을 수평 정중앙 정렬 (세로) */
+      align-items: center;
+    }
+    #con5 > .box{
+      height: 20px;
+    }
+    #con6{
+      width: 100%;
+      height: 400px;
+      flex-direction: column;
+      /* 세로 중앙.. */
+      justify-content: center;
+      /* 가로 중앙.. */
+      align-items: center;
+    }
+
+    #con7{
+      width: 450px;
+      height: 150px;
+      align-items: flex-end;
+    }
+    #con7 > .box:first-child{
+      /* 자기 혼자서만 이동 */
+      align-self: center;
+    }
+    #con7 > .box:nth-child(4){
+      /* 자기 혼자서만 이동 */
+      align-self: stretch;
+    }
+    #con7 > .box:last-child{
+      /* 자기 혼자서만 이동 */
+      align-self: flex-start;
+    }
+
+    #con8{
+      width: 450px;
+      height: 150px;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      /*align-items: center; !* 각 줄이 정중앙 *!*/
+      align-content: center; /* 모든 줄이 합쳐서정중앙 */
+    }
+
+    #con9{
+        width: 100%;
+        /* 양 끝을 붙이고, 여백은 비율 똑같이 나눠갖기 */
+        /*justify-content: space-between;*/
+        /* 자식 요소의 양 옆 여백을 전부 똑같은 크기로 */
+        /* 자식을 제외한 나머지 여백을 전부 똑같은 크기로 */
+        justify-content: space-evenly;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container" id="con1">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<div class="container" id="con2">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<div class="container" id="con3">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<div class="container" id="con4">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+
+<h5>CON5</h5>
+<div class="container" id="con5">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<h5>CON6</h5>
+<div class="container" id="con6">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<h5>CON7</h5>
+<div class="container" id="con7">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<h5>CON8</h5>
+<div class="container" id="con8">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+<h5>CON9</h5>
+<div class="container" id="con9">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+</div>
+<h5>CON10</h5>
+<div class="container" id="con10">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+  <div class="box">9</div>
+  <div class="box">10</div>
+</div>
+
+
+
+
+
+</body>
+</html>
