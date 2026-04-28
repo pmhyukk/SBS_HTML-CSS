@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>카드 실습</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        width: 1200px;
+    }
+
+    .card{
+        width: 300px;
+        padding: 8px 12px;
+        background-color: bisque;
+        list-style: none;
+        cursor: pointer;
+    }
+    .card:hover .content{
+        text-decoration: underline;
+    }
+    .card:hover .image-container img{
+        transform: scale(120%);
+    }
+
+    .card .image-container{
+        width: 100%;
+        height: 230px;
+        background-color: aqua;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .card .image-container > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition-duration: 0.5s;
+    }
+    .card .content{
+        margin: 10px 0;
+    }
+    .card .user-info{
+        display: flex;
+        align-items: center;
+    }
+    .card .user-info .user-image{
+        width: 28px;
+        height: 28px;
+        margin-right: 4px;
+        background-image: url("https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogpfthumb.phinf.naver.net%2FMjAyNTAxMDlfMjkg%2FMDAxNzM2MzkzOTQ5NTY3.4WJUn4eiOmC0fMBq0GxPnl7FSLfGXZSObMusjOtmMkUg.yip_JgKaEI4YXWSpVZfDP0eBwnnfahdu8yrjZe_6Nnsg.JPEG%2FprofileImage.jpg%22&type=nf40_40&service=navermain");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+    }
+
+
+</style>
+<body>
+<ul>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>
+        </section>
+    </li>
+    <li class="card">
+        <div class="image-container">
+            <img src="https://s.pstatic.net/dthumb.phinf/?src=%22http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjA0MjZfMjE0%2FMDAxNzc3MTYzNTUwNDAz.BNqsOJNmHAO-oSe0N4oyUq5sTAGqTcKSAVlKfHCtZBog.TakZ1LBv5Dk61J3eyOIm_zDR8q5fdndud4b7kUfarEgg.JPEG%2F900_1777163549122.jpg%22&type=ff364_236&service=navermain" alt="">
+        </div>
+        <p class="content">여주아울렛 몽클레어 바람막이 추천 TOP3 여성 롱 숏 가격</p>
+        <section class="user-info">
+            <div class="user-image"></div>
+            <div class="user-name">댕댕</div>3
+        </section>
+    </li>
+</ul>
+</body>
+</html>
